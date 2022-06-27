@@ -1,0 +1,16 @@
+{% extends "AppBanco/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+ 
+<form action="{% url 'buscar' %}" method="GET">
+
+    <p><input type="number" name="codigo_cliente" id="codigo_cliente"></p>
+    <p><input type="submit" value="Buscar"></p>
+
+</form>
+
+<h1>BUSQUEDA DE CLIENTES</h1>
+
+{% endblock %}

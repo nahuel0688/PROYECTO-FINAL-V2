@@ -1,0 +1,16 @@
+<h2>Log In</h2>
+<form method="post"> {% csrf_token %}
+  {% if mensaje %}
+
+  {{mensaje}}
+  
+  <button>
+  <a href="{% url 'login' %}"> Volver</a>
+  </button>  
+  {% else %}
+  
+  {{ formulario.as_p }}
+  <button type="submit">Log In</button>
+  
+  {% endif %}
+</form>

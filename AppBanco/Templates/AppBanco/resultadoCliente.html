@@ -1,0 +1,35 @@
+{% extends "AppBanco/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>CLIENTES ENCONTRADOS</h1>
+
+{% if clientes %}
+
+<ul>
+{% for cliente in clientes %}
+
+    <li>{{cliente.codigo_cliente}}</li>
+    <li>{{cliente.nombre}}</li>
+    <li>{{cliente.email}}</li>
+    <br>
+    
+{% endfor %}
+</ul>
+{% else %}
+
+{% if respuesta %}
+
+    <p style="color:red">{{respuesta}}</p>
+
+{% endif %}
+
+{% endif %}
+
+    
+
+{% endblock %}
+
+
